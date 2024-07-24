@@ -8,3 +8,14 @@ deploy1:
 
   service:
       servicePort: 8080
+
+deploy2: 
+  ReplicaNumber: 1
+
+  containers:
+    containerPort: 8080
+    image: 'quay.io/maes1/shir-app'
+    tag: 'chart_v1'
+
+  service:
+    servicePort: 8080
