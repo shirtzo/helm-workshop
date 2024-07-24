@@ -3,7 +3,7 @@ name: workshop-test
 description: A Helm chart for Kubernetes
 type: application
 dependencies:
-  - name: <<Name-of-Your-Chart>>
+  - name: helm-lab2
     repository: oci://ghcr.io/<<Git-Hub-User>>/helm/
     version: "1.0.0"
     alias: deploy1
