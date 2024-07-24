@@ -8,12 +8,12 @@ spec:
   selector:
     matchLabels:
 # set your lab user name
-      app: maes1-hello-world
+      app: user20-hello-world
   template:
     metadata:
       labels:
 # set your lab user name
-        app: maes1-hello-world
+        app: user20-hello-world
     spec:
       containers:
         - resources: {}
