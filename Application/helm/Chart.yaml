@@ -1,5 +1,5 @@
 apiVersion: v2
-name: https://github.com/shirtzo/helm-workshop.git
+name: user20-hello-world
 description: A Helm chart for Kubernetes
 type: application
 version: 1.0.0
