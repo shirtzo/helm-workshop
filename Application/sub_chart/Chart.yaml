@@ -7,7 +7,7 @@ dependencies:
     repository: oci://ghcr.io/shirtzo/helm
     version: "1.0.0"
     alias: deploy1
-  - name: workshop-test
+  - name: helm-workshop
     repository: oci://ghcr.io/shirtzo/helm
     version: "1.0.0"
     alias: deploy2
