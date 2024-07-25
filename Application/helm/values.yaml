@@ -11,20 +11,20 @@ service:
 
 probes:
   readiness: 
-    httpGet:
+    probeMapping:
       path: '/health/readiness' # this check the application url path
       scheme: HTTP
-    baseConfig:
+    probeConfig:
       initialDelaySeconds: '1' # the time is waiting befor testing the application path
       timeoutSeconds: '1' # the time for timeout
       periodSeconds: '10' # the abount of time to wait between checks
       successThreshold: '1' # count to decalre seccessfull 
       failureThreshold: '3' # count to decalre failure 
   liveness:
-    httpGet:
+    probeMapping:
       path: '/health/liveness' # this check the application url path
       scheme: HTTP
-    baseConfig:
+    probeConfig:
       initialDelaySeconds: '1' # the time is waiting befor testing the application path
       timeoutSeconds: '1' # the time for timeout
       periodSeconds: '10' # the abount of time to wait between checks
