@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/config: {{ include ("helm.templates.Configmap.yaml") . | sha256sum }}
+        checksum/config: {{ include ("templates.ConfigMap") . | sha256sum }}
       labels:
 # set your lab user name
         app: {{ .Chart.Name }}
