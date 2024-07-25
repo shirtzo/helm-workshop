@@ -4,6 +4,29 @@ containers:
   containerPort: 8080
   image: 'quay.io/maes1/shir-app'
   tag: 'chart_v1'
+  name: 'http'
 
 service:
   servicePort: 8080
+
+probes:
+  readiness: 
+    httpGet:
+      path: '/health/readiness' # this check the application url path
+      scheme: HTTP
+    baseConfig:
+      initialDelaySeconds: '1' # the time is waiting befor testing the application path
+      timeoutSeconds: '1' # the time for timeout
+      periodSeconds: '10' # the abount of time to wait between checks
+      successThreshold: '1' # count to decalre seccessfull 
+      failureThreshold: '3' # count to decalre failure 
+  liveness:
+    httpGet:
+      path: '/health/liveness' # this check the application url path
+      scheme: HTTP
+    baseConfig:
+      initialDelaySeconds: '1' # the time is waiting befor testing the application path
+      timeoutSeconds: '1' # the time for timeout
+      periodSeconds: '10' # the abount of time to wait between checks
+      successThreshold: '1' # count to decalre seccessfull 
+      failureThreshold: '3' # count to decalre failure 
