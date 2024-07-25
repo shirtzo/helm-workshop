@@ -27,3 +27,5 @@ deploy2:
   argocd:
     syncwave:
       deployment: 10
+
+test: Healthy
