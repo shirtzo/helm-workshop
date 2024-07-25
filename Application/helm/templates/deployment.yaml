@@ -30,7 +30,7 @@ spec:
           imagePullPolicy: IfNotPresent
           volumeMounts:
           - name: index-html
-            mountPath: /tmp/html # this will mount the html.index file to it application location
+            mountPath: {{ .Values.volume.mount.path }} # this will mount the html.index file to it application location
           readinessProbe:
             {{- include "app.readinessProbe" . | nindent 12}}
           livenessProbe:

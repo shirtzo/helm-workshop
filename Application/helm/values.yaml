@@ -30,3 +30,7 @@ probes:
       periodSeconds: '10' # the abount of time to wait between checks
       successThreshold: '1' # count to decalre seccessfull 
       failureThreshold: '3' # count to decalre failure 
+
+volume:
+  mount: 
+    path: '/tmp/html'
