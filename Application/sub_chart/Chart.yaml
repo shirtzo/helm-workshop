@@ -5,7 +5,7 @@ type: application
 dependencies:
   - name: helm-workshop
     repository: oci://ghcr.io/shirtzo/helm
-    version: "1.0.4"
+    version: "1.0.5"
     alias: deploy1
   - name: helm-workshop
     repository: oci://ghcr.io/shirtzo/helm
