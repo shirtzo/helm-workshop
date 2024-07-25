@@ -4,7 +4,7 @@ metadata:
 # set your lab user name
   name: {{ .Chart.Name }}
   annotations:
-    argocd.argoproj.io/sync-wave: {{ .Values.argocd.syncwave.deployment }}
+    argocd.argoproj.io/sync-wave: {{ .Values.argocd.syncwave.deployment | quote }}
 spec:
   replicas: {{ .Values.ReplicaNumber }}
   selector:
