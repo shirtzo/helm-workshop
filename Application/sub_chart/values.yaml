@@ -11,7 +11,7 @@ deploy1:
 
   argocd:
     syncwave:
-      deployment: 5
+      deployment: '5'
 
 deploy2: 
   ReplicaNumber: 1
@@ -26,4 +26,4 @@ deploy2:
 
   argocd:
     syncwave:
-      deployment: 10
+      deployment: '10'

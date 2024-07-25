@@ -37,4 +37,4 @@ volume:
 
 argocd:
   syncwave:
-     deployment: 5
+     deployment: '5'
