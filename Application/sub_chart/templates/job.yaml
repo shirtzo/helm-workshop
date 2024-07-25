@@ -12,14 +12,14 @@ spec:
     spec:
     restartPolicy: "Never"
     containers:
-    - name: test-url
-      image: registry.access.redhat.com/ubi8-minimal:8.7-1031
-      workingDir: /workspace/output
-      command: ["/bin/bash", "-c"]
-      args: ["curl ${SERVICE}:${PORT}/health/liveliness || exit 1"]
-      env:
-        - name: SERVICE
-          value: "deploy1-service"
-        - name: PORT
-          value: "{{ .Values.deploy1.service.servicePort }}"
+      - name: test-url
+        image: registry.access.redhat.com/ubi8-minimal:8.7-1031
+        workingDir: /workspace/output
+        command: ["/bin/bash", "-c"]
+        args: ["curl ${SERVICE}:${PORT}/health/liveliness || exit 1"]
+        env:
+          - name: SERVICE
+            value: "deploy1-service"
+          - name: PORT
+            value: "{{ .Values.deploy1.service.servicePort }}"
   backoffLimit: 1
