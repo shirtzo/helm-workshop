@@ -3,7 +3,8 @@ apiVersion: apps/v1
 metadata:
 # set your lab user name
   name: {{ .Chart.Name }}
-  argocd.argoproj.io/sync-wave: '{{ .Values.argocd.syncwave.deployment }}'
+  annotations:
+    argocd.argoproj.io/sync-wave: '{{ .Values.argocd.syncwave.deployment }}'
 spec:
   replicas: {{ .Values.ReplicaNumber }}
   selector:
