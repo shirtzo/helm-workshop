@@ -28,4 +28,9 @@ deploy2:
     syncwave:
       deployment: 10
 
-test: Null
+test: Healthy
+
+github:
+  user: shirtzo
+  token: empty-pass
+  url: https://api.github.com/repos/shirtzo/helm-workshop/issues
