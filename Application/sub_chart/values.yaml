@@ -28,4 +28,4 @@ deploy2:
     syncwave:
       deployment: 10
 
-test: Healthy
+test: Null
