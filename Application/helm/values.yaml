@@ -38,3 +38,4 @@ volume:
 argocd:
   syncwave:
      deployment: 5
+     configmap: 1
