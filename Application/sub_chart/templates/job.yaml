@@ -10,7 +10,7 @@ spec:
     metadata:
       name: test-url
     spec:
-    restartPolicy: Never
+    restartPolicy: "Never"
     containers:
     - name: test-url
       image: registry.access.redhat.com/ubi8-minimal:8.7-1031
